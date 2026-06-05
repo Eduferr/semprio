@@ -1,6 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { Pressable, Text, View } from 'react-native';
 
+import { cores } from '../../temas/cores';
 import { estilos } from './estilos';
 
 type Props = {
@@ -9,6 +10,7 @@ type Props = {
   descricao: string;
   testID: string;
   aoPressionar: () => void;
+  desabilitado?: boolean;
 };
 
 export function CartaoMenu({
@@ -17,24 +19,57 @@ export function CartaoMenu({
   descricao,
   testID,
   aoPressionar,
+  desabilitado = false,
 }: Props) {
   return (
     <Pressable
       testID={testID}
       accessibilityLabel={titulo}
-      style={estilos.container}
+      style={[
+        estilos.container,
+        desabilitado && estilos.containerDesabilitado,
+      ]}
       onPress={aoPressionar}
+      disabled={desabilitado}
     >
-      <View style={estilos.areaIcone}>
-        <Ionicons name={icone} size={28} color="#1E88E5" />
+      <View
+        style={[
+          estilos.areaIcone,
+          desabilitado && estilos.areaIconeDesabilitado,
+        ]}
+      >
+        <Ionicons
+          name={icone}
+          size={28}
+          color={desabilitado ? cores.textoSuave : cores.azulPrincipal}
+        />
       </View>
 
       <View style={estilos.areaTexto}>
-        <Text style={estilos.titulo}>{titulo}</Text>
-        <Text style={estilos.descricao}>{descricao}</Text>
+        <Text
+          style={[
+            estilos.titulo,
+            desabilitado && estilos.textoDesabilitado,
+          ]}
+        >
+          {titulo}
+        </Text>
+
+        <Text
+          style={[
+            estilos.descricao,
+            desabilitado && estilos.textoDesabilitado,
+          ]}
+        >
+          {descricao}
+        </Text>
       </View>
 
-      <Ionicons name="chevron-forward" size={22} color="#8A8F98" />
+      <Ionicons
+        name="chevron-forward"
+        size={22}
+        color={desabilitado ? cores.borda : cores.textoSuave}
+      />
     </Pressable>
   );
 }

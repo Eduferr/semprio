@@ -61,6 +61,7 @@ export function TelaInicial({ navigation }: any) {
           descricao="Benefícios e ofertas"
           testID="botao-promocoes"
           aoPressionar={() => {}}
+          desabilitado
         />
       </ScrollView>
 

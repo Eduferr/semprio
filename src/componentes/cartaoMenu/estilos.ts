@@ -41,4 +41,16 @@ export const estilos = StyleSheet.create({
         fontSize: fontes.corpo,
         color: cores.textoSecundario,
     },
+
+    containerDesabilitado: {
+        opacity: 0.55,
+    },
+
+    areaIconeDesabilitado: {
+        backgroundColor: '#EEF2F6',
+    },
+
+    textoDesabilitado: {
+        color: '#9CA3AF',
+    },
 });
