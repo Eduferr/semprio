@@ -1,5 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import { Pressable, Text, View } from 'react-native';
+import { cores } from '../../temas/cores';
 
 import { estilos } from './estilos';
 
@@ -27,7 +28,7 @@ export function BarraInferior({
                 <Ionicons
                     name="home"
                     size={24}
-                    color={rotaAtual === 'home' ? '#1E88E5' : '#8A8F98'}
+                    color={rotaAtual === 'home' ? cores.azulPrincipal : cores.textoSuave}
                 />
                 <Text style={[estilos.texto, rotaAtual === 'home' && estilos.textoAtivo]}>
                     Home
@@ -41,8 +42,8 @@ export function BarraInferior({
                 onPress={aoPressionarSOS}
             >
                 <Text style={estilos.textoSOS}>SOS</Text>
-                <Text style={estilos.subtextoSOS}>Pressione por</Text>
-                <Text style={estilos.subtextoSOS}>3 segundos</Text>
+                <Text style={estilos.textoSOSInfo}>Pressione por</Text>
+                <Text style={estilos.textoSOSInfo}>3 segundos</Text>
             </Pressable>
 
             <Pressable
@@ -54,7 +55,7 @@ export function BarraInferior({
                 <Ionicons
                     name="person"
                     size={24}
-                    color={rotaAtual === 'perfil' ? '#1E88E5' : '#8A8F98'}
+                    color={rotaAtual === 'perfil' ? cores.azulPrincipal : cores.textoSuave}
                 />
                 <Text style={[estilos.texto, rotaAtual === 'perfil' && estilos.textoAtivo]}>
                     Perfil

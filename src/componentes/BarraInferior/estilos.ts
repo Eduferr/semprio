@@ -1,11 +1,13 @@
 import { StyleSheet } from 'react-native';
 
+import { cores } from '../../temas/cores';
+
 export const estilos = StyleSheet.create({
     container: {
-        height: 86,
-        backgroundColor: '#FFFFFF',
+        height: 90,
+        backgroundColor: cores.branco,
         borderTopWidth: 1,
-        borderTopColor: '#E5E7EB',
+        borderTopColor: cores.borda,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-around',
@@ -22,24 +24,24 @@ export const estilos = StyleSheet.create({
 
     texto: {
         fontSize: 13,
-        color: '#8A8F98',
+        color: cores.textoSuave,
         fontWeight: '600',
     },
 
     textoAtivo: {
-        color: '#1E88E5',
+        color: cores.azulPrincipal,
     },
 
     botaoSOS: {
         width: 110,
         height: 110,
-        borderRadius: 46,
-        backgroundColor: '#EF3434',
+        borderRadius: 55,
+        backgroundColor: cores.vermelhoSOS,
         alignItems: 'center',
         justifyContent: 'center',
-        marginTop: -42,
+        marginTop: -50,
         borderWidth: 8,
-        borderColor: '#FAD0D0',
+        borderColor: cores.vermelhoClaro,
         shadowColor: '#000',
         shadowOpacity: 0.22,
         shadowRadius: 10,
@@ -47,16 +49,16 @@ export const estilos = StyleSheet.create({
     },
 
     textoSOS: {
-        color: '#FFFFFF',
+        color: cores.branco,
         fontSize: 28,
         fontWeight: 'bold',
         lineHeight: 30,
     },
 
-    subtextoSOS: {
-    color: '#FFFFFF',
-    fontSize: 11,
-    fontWeight: '600',
-    lineHeight: 13,
+    textoSOSInfo: {
+        color: cores.branco,
+        fontSize: 11,
+        fontWeight: '600',
+        lineHeight: 13,
     },
 });

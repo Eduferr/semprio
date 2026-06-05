@@ -1,6 +1,6 @@
 import { Button, Text, View } from 'react-native';
 
-import { BarraInferior } from '../../componentes/BarraInferior';
+import { BarraInferior } from '../../componentes/barraInferior';
 
 export function TelaPerfil({ navigation }: any) {
   function abrirHome() {
