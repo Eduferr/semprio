@@ -1,10 +1,10 @@
 import { Text, View } from 'react-native';
 import { coresCards, estilosGlobais } from '../../estilos/estilosGlobais';
 
-export function TelaFamilia() {
+export function TelaSaude() {
   return (
     <View>
-      <Text>Família</Text>
+      <Text>Saude</Text>
     </View>
   );
 }

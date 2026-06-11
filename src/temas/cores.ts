@@ -4,6 +4,7 @@ export const cores = {
     azulClaro: '#E3F2FD',
 
     vermelhoSOS: '#EF3434',
+    roxoEscuro: '#6A1B9A',
     vermelhoClaro: '#FAD0D0',
 
     fundo: '#F4F7FB',

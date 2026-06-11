@@ -4,14 +4,14 @@ import { cores } from '../../temas/cores';
 
 export const estilos = StyleSheet.create({
     container: {
-        height: 90,
+        height: 80,
         backgroundColor: cores.branco,
         borderTopWidth: 1,
         borderTopColor: cores.borda,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-around',
-        paddingBottom: 14,
+        paddingBottom: 0,
         paddingHorizontal: 20,
     },
 
